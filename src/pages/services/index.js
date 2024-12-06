@@ -10,13 +10,6 @@
           );
         };
 
-        export async function getServerSideProps() {
-          // Fetch page-specific data from the API for SSR
-          const pageData = await fetch(`http://localhost:3002/api/location/tester/Services`)
-            .then(res => res.json());
-          return { props: { pageData } };
-        }
-
         export default Page;
       
           

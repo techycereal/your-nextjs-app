@@ -1,115 +1,15 @@
-import Image from "next/image";
-import localFont from "next/font/local";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+            
+      import React from 'react';
+      import Link from 'next/link'; 
+      const Page = ({ templateData, subdomain }) => {
+        return (
+          <div>
+            <div><header class="flex flex-row justify-center gap-4 m-0 p-6 relative shadow-lg bg-white text-black"><div class="flex flex-row gap-4"><div class="relative"><Link href="/location1" class="text-lg cursor-pointer">Location</Link><div class="absolute top-full right-0 w-48 bg-white text-black shadow-lg p-4 rounded-lg z-40 hidden"></div></div></div><div><a href="/" class="text-2xl cursor-pointer inline-block"><p>Burger Barn Breakfast</p></a></div><div class="flex flex-row gap-4"><div class="relative"><Link href="/menu1" class="text-lg cursor-pointer">Menu</Link><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden"></div></div><div class="relative"><Link href="/services" class="text-lg cursor-pointer">Services</Link><div class="absolute top-full right-0 w-48 bg-white shadow-lg p-4 rounded-lg z-40 hidden"><p class="text-lg text-gray-700 cursor-pointer hover:underline">Catering</p><p class="text-lg text-gray-700 cursor-pointer hover:underline">Food Trailer</p></div></div></div></header><div class="flex flex-col-reverse sm:flex-row items-center justify-center text-[#242424]"><div class="relative w-full h-[30rem] sm:h-[40rem] md:h-[50rem] lg:h-[60rem] overflow-hidden"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1733427944835-pexels-ash-craig-122861-376464.jpg" alt="main Image" class="object-cover w-full h-full"/><div class="absolute inset-0 bg-gray-900 opacity-50"></div><div class="absolute top-1/4 left-1/4 transform -translate-y-1/2 text-white text-left w-full px-6"><div class="text-4xl font-bold sm:text-3xl md:text-4xl lg:text-5xl"></div><div class="text-white"></div></div></div></div><div class="pt-10 bg-[#FFFDFD] text-black pb-10"><p class="text-center font-semibold text-3xl">Menu</p><hr class="border-black border-solid border-1 w-1/4 mx-auto mb-10"/><div class="flex flex-col items-center justify-center"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1733428242172-menus.avif" class="w-1/2 shadow-lg rounded-lg"/></div></div><div><div><div class="flex flex-col items-center pb-28 font-baloo w-full px-4 bg-black"><p class="text-4xl font-semibold mt-24 text-white">About Us</p><hr class="w-1/3 border-white my-6"/><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl mx-auto"><div class="flex flex-col items-center shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl relative"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1733491284240-values.webp" alt="Hair Stylist 1" class="w-72 h-72 object-cover rounded-lg mb-4"/><div class="text-white text-xl font-bold"><p>About Us</p></div><div class="text-white text-md"><p>Welcome to Burger Barn Breakfast! We’re a friendly spot serving delicious burgers and hearty breakfast options, made with fresh, high-quality ingredients. Whether you're here for a morning treat or a satisfying meal, we’re committed to providing an enjoyable experience for all.</p></div></div><div class="flex flex-col items-center shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl relative"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1733428009437-pexels-ash-craig-122861-376464.jpg" alt="Hair Stylist 2" class="w-72 h-72 object-cover rounded-lg mb-4"/><div class="text-white text-xl font-bold">Our Mission</div><div class="text-white text-md">Our mission is simple: bring people together over great food, made with care and fresh, locally-sourced ingredients.</div></div><div class="flex flex-col items-center shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl relative"><img src="https://saastemplatesstorage.blob.core.windows.net/sasstemplatesstorages/1733428024965-breakfast.jpg" alt="Hair Stylist 3" class="w-72 h-72 object-cover rounded-lg mb-4"/><div class="text-white text-xl font-bold">Our Values</div><div class="text-white text-md">Quality: Fresh, flavorful ingredients in every meal. Community: A welcoming place for everyone. Sustainability: Responsible sourcing and packaging. Innovation: Always fresh and exciting menu options.</div></div></div></div></div></div><div class="mt-10"><div class="flex flex-col items-center pb-28 font-baloo w-full px-4 bg-gray-50"><p class="text-4xl font-extrabold mt-24 text-black">Contact Us</p><hr class="w-1/3 border-t-4 border-black my-6"/><div class="bg-white border border-black shadow-lg p-8 rounded-lg w-full max-w-md"><div class="mb-6"><label for="name" class="text-black text-xl block mb-2">Name:</label><input id="name" type="text" placeholder="Your full name" class="border border-black w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/></div><div class="mb-6"><label for="email" class="text-black text-xl block mb-2">Email:</label><input id="email" type="email" placeholder="Your email address" class="border border-black w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/></div><div class="mb-6"><label for="phone" class="text-black text-xl block mb-2">Phone Number:</label><input id="phone" type="tel" placeholder="Your phone number" class="border border-black w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/></div><div class="mb-6"><label for="message" class="text-black text-xl block mb-2">Message:</label><textarea id="message" placeholder="Your message" rows="4" class="border border-black w-full px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea></div><button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-blue-600 transition-all duration-300">Submit</button></div></div></div><div><button class="bg-blue-400 text-white rounded p-2">Generate</button></div></div>
+          </div>
+        );
+      };
 
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+      export default Page;
+    
+          

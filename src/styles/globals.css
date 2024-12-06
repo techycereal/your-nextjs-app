@@ -2,20 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.ql-editor {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  padding: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.ql-toolbar {
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Font Sizes */
+.ql-size-small {
+  font-size: 0.75rem; /* 12px */
+}
+
+.ql-size-normal {
+  font-size: 1rem; /* 16px */
+}
+
+.ql-size-large {
+  font-size: 1.5rem; /* 24px */
+}
+
+.ql-size-huge {
+  font-size: 2rem; /* 32px */
+}
+
+/* Text Styling */
+.ql-bold {
+  font-weight: bold;
+}
+
+.ql-italic {
+  font-style: italic;
+}
+
+.ql-underline {
+  text-decoration: underline;
+}
+
+.ql-strike {
+  text-decoration: line-through;
+}
+
+/* Link Styling */
+.ql-link {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.ql-link:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+.ql-editor ul,
+.ql-editor ol {
+  padding-left: 1.5rem;
+}
+
+.ql-editor li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote */
+.ql-editor blockquote {
+  border-left: 4px solid #ccc;
+  margin: 0;
+  padding-left: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Highlighting */
+.ql-editor mark {
+  background-color: yellow;
+  color: black;
 }
